@@ -1,0 +1,247 @@
+@import "http://webfonts.ru/import/amble.css";
+
+body {
+  font-family: "Amble", Helvetica, Arial, sans-serif;
+  color: #000;
+  font-size: 16px;
+  margin: 0; padding: 0;
+}
+
+a {color: #000; text-decoration: none;}
+section { min-width: 1100px; position: relative;}
+
+/*HEADER ------------------------------------------*/
+
+header {
+  font-size: 32px;
+  width: 100%;
+  margin-bottom: 45px;
+  height: 50px;
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  box-shadow: 0 5px 7px #94C888;
+
+}
+
+header #round {
+  width: 145px;
+  height: 140px;
+  padding: 5px;
+  position: absolute;
+  display: table;
+  background-color: #56CF41;
+  text-align: center;
+  border-radius: 100px;
+  margin: auto;
+  top: -30px; left: 0; bottom: 0; right: 0;
+  border-bottom: 2px solid #ccc;
+  z-index: 4;
+}
+
+header #round a {
+  margin: 10px;
+  font-weight: bold;
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  top: 16px;
+  color: #fff;
+}
+
+header #round a small {
+  position: absolute;
+  left: 57px;
+  font-size: 15px;
+}
+
+/*MIDDLE CONTENT ------------------------------------------*/
+
+#content {
+  position: absolute;
+  left: 15px;
+  right: 300px;
+  width: 740px;
+  z-index: 2;
+}
+
+#chat-window { 
+  position: relative;
+  width: 707px;
+}
+
+#messages {
+  height: 300px;
+  overflow: auto;
+  width: 100%;
+  padding: 5px;
+  padding-bottom: 40px;
+  border: 2px solid #2BD526;
+  border-radius: 3px;
+  box-shadow: 2px 2px 4px #606060;
+  font-size: 14px;
+  background-color: #A9E49E;
+}
+
+#messages div{
+  padding: 2px;
+}
+
+#room {
+  text-align: left;
+  margin-left: 10px;
+  padding: 2px 37px;
+  font-size: 18px;
+  display: inline-block;
+  border-radius: 0 0 4px 4px;
+  background-color: #A9E49E;
+  border: 2px solid #2BD526;
+  border-top: none;
+  cursor: default;
+  box-shadow: 2px 2px 4px #606060;
+  position: absolute;
+  right: -14px; bottom: -25px; 
+}
+
+
+#send-message {
+  border-radius: 3px;
+  padding: 4px;
+  margin: 10px;
+  margin-top: 0;
+  width: 300px;
+  border: 2px solid #2BD526;
+  box-shadow: 2px 2px 4px #606060;
+  background-color: #A9E49E;
+  font-size: 17px;
+  outline: none;
+  height: 47px;
+  transition: all .2s;
+}
+
+#send-message:focus {
+  background-color: #fff;
+  opacity: .9;
+}
+
+#send-form { 
+  position: relative;
+  width: 400px;
+  top: -33px;
+}
+
+#send-button {
+  position: absolute;
+  top: 0;
+  right: 46px;
+  height: 60px;
+  width: 30px;
+  border-radius: 3px;
+  background: #A9E49E url(../img/send.png) 4px no-repeat;
+  background-size: 18px;
+  border: 2px solid #2BD526;
+  box-shadow: 2px 2px 4px #606060;
+  cursor: pointer;
+}
+
+/*ASIDE ------------------------------------------*/
+
+aside {
+  width: 300px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
+
+aside .options span {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  margin: 2px 1px;
+  border: 2px solid #2BD526;
+  border-radius: 3px;
+  padding: 5px 25px;
+  background-color: #A9E49E;
+  cursor: pointer;
+}
+
+aside .block {
+    background-color: #A9E49E;
+    min-height: 300px;
+    border: 2px solid #2BD526;
+    border-radius: 3px;
+    margin: 0 15px;
+}
+
+aside .options span#menu-icon { content: url(../img/user.png); }
+aside .options span#rooms-icon { content: url(../img/package.png); }
+aside .options span#settings-icon { content: url(../img/mechanic.png); }
+
+aside .block > span {
+  text-align: center;
+  display: block;
+  padding: 5px 0;
+}
+
+.help {
+  padding: 5px;
+  border: 1px solid #fff;
+  display: inline-block;
+  background-color: #2BD526;
+  position: absolute;
+  color: #fff
+}
+
+.help:after {
+  content: "";
+  height: 8px;
+  width: 8px;
+  border-left: 0px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #2BD526;
+  position: absolute;
+  left: 0px;
+  bottom: -13px;
+}
+
+aside .settings.block > span {
+  text-align: right;
+  padding-right: 13px;
+}
+
+aside .menu.block > span {
+  text-align: left;
+  padding-left: 19px;
+}
+
+aside .menu, aside .rooms, aside .settings {
+  text-align: left;
+  display: none;
+}
+
+#room-list div {
+  display: inline-block;
+  padding: 15px 10px;
+  margin: 2px 5px;
+  background: #2BD526;
+  color: #fff;
+  opacity: 0.8;
+  border-radius: 3px;
+  transition: all .3s ease-in-out;
+}
+
+#room-list div:hover {
+  opacity: 1;
+  box-shadow: 0 5px 7px #94C888;
+  text-shadow: 0px 0px 4px #fff;
+}
+
+#room-list div {
+  font-weight: bold;
+  margin: 5px;
+}
+
+#room-list div:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
