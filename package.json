@@ -1,7 +1,7 @@
 {
-	"name": "razzle",
+	"name": "mod",
 	"version": "0.0.1",
-	"description": "Webapp for communication",
+	"description": "Web app",
 	"dependencies": {
 		"socket.io": "~0.9.6",
 		"mime": "~1.2.7"
