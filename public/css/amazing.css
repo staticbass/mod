@@ -47,6 +47,11 @@ header #round a {
   position: relative;
   top: 16px;
   color: #fff;
+  transition: all .3s ease;
+}
+
+header #round a:hover {
+  text-shadow: 0px 0px 4px #fff;
 }
 
 header #round a small {
@@ -144,6 +149,31 @@ header #round a small {
   cursor: pointer;
 }
 
+#commands span{
+  border-bottom: 1px dashed #2BD526;
+  cursor: pointer;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+#commands span:hover { color: #2BD526; }
+#commands span:after {
+  content: "";
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 8px solid #2BD526;
+  position: absolute;
+  right: -13px; top: 7px;
+}
+
+#commands ul {
+  list-style: none;
+  margin: 0; 
+  padding: 10px 0;
+  display: none;
+}
+#commands li { padding: 4px 0 0 17px; }
+
 /*ASIDE ------------------------------------------*/
 
 aside {
@@ -163,14 +193,16 @@ aside .options span {
   padding: 5px 25px;
   background-color: #A9E49E;
   cursor: pointer;
+  box-shadow: 2px 2px 4px #606060;
 }
 
 aside .block {
-    background-color: #A9E49E;
-    min-height: 300px;
-    border: 2px solid #2BD526;
-    border-radius: 3px;
-    margin: 0 15px;
+  background-color: #A9E49E;
+  min-height: 300px;
+  border: 2px solid #2BD526;
+  border-radius: 3px;
+  margin: 0 15px;
+  box-shadow: 2px 2px 4px #606060;
 }
 
 aside .options span#menu-icon { content: url(../img/user.png); }
@@ -186,22 +218,11 @@ aside .block > span {
 .help {
   padding: 5px;
   border: 1px solid #fff;
+  border-radius: 3px;
   display: inline-block;
   background-color: #2BD526;
   position: absolute;
   color: #fff
-}
-
-.help:after {
-  content: "";
-  height: 8px;
-  width: 8px;
-  border-left: 0px solid transparent;
-  border-right: 7px solid transparent;
-  border-top: 7px solid #2BD526;
-  position: absolute;
-  left: 0px;
-  bottom: -13px;
 }
 
 aside .settings.block > span {

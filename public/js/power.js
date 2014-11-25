@@ -2,11 +2,6 @@ $(function(){
 
 	$('#send-message').val('/nick ');
 
-	$(window).bind('beforeunload', function(){
-		return prompt('Are you sure? ');
-	});
-
-
 	// MAIN MENU TABS
 
 	var $option = $('.options > span'),
@@ -15,7 +10,7 @@ $(function(){
 		$('.rooms').fadeIn('fast').addClass('shown');
 
 
-	$('#menu-icon').showHelp('menu');
+	$('#menu-icon').showHelp('profile');
 	$('#rooms-icon').showHelp('rooms');
 	$('#settings-icon').showHelp('settings');
 
@@ -44,5 +39,22 @@ $(function(){
 			return result;
 		}
 	}
+
+
+	// COMMANDS
+
+	$('#commands span').on('click', function() {
+
+		var $cmd = $('#commands').find('ul').toggleClass('opened');
+
+		if($cmd.hasClass('opened')) {
+			$(this).css({'color': '#2BD526'});
+			$cmd.slideDown();
+		} else {
+			$cmd.slideUp();
+			$(this).attr('style', '');
+		}
+		
+	})
 
 });
