@@ -5,6 +5,7 @@ var mime = require('mime');
 
 
 var cache = {};
+var PORT = process.env.PORT || 3000;
 
 function send404(res) {
 	res.writeHead(404, {'Content-Type': 'text/plain'});
@@ -50,8 +51,8 @@ var server = http.createServer(function(req, res) {
 	serveStatic(res, cache, absPath);
 });
 
-server.listen(3000, function() {
-	console.log('Server | PORT = 3000');
+server.listen(PORT, function() {
+	console.log('Server | PORT = ' + PORT);
 });
 
 var chatServer = require('./lib/chat_server.js');
